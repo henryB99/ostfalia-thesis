@@ -1,10 +1,11 @@
+dist
 *.aux
 *.lof
 *.log
 *.lot
 *.toc
 *.synctex.gz
-Hauptdokument.pdf
+*.pdf
 *.bbl
 *.blg
 *.lol

@@ -10,9 +10,18 @@
 
 \usepackage[nottoc,notlot,notlof]{tocbibind}
 
-\usepackage[bottom]{footmisc} % Fußnoten nach unten stellen
+\usepackage[titles]{tocloft}
+\renewcommand{\cftchapfont}{\bf\sffamily}
+\renewcommand{\cftsecfont}{\sffamily}
+\renewcommand{\cftsubsecfont}{\sffamily}
+\renewcommand{\cfttabfont}{\sffamily}
+\renewcommand{\cftfigfont}{\sffamily}
 
-\setlength{\parindent}{0em} % Absatzeinrückung linksbündig
+\usepackage[bottom]{footmisc} % Display footnotes at the bottom of the page
+
+\setlength{\parindent}{0em} % Left paragraph indentation
+\setlength{\marginparwidth}{2cm} % Removes a warning thrown by the 'todonotes' package. This is only needed in the draft an can be commented out afterwards.
+
 \usepackage{setspace}
 \onehalfspacing
 \usepackage{parskip}
@@ -60,14 +69,6 @@
 \titlespacing*{\subsection}{0pt}{0pt}{0pt}
 \titleformat{\subsubsection}[display] {\sffamily \tiny}{}{-15pt}{\large \thesubsubsection\ }
 \titlespacing*{\subsubsection}{0pt}{0pt}{0pt}
-
-\usepackage[titles]{tocloft}
-\renewcommand{\cftchapfont}{\bf\sffamily}
-\renewcommand{\cftsecfont}{\sffamily}
-\renewcommand{\cftsubsecfont}{\sffamily}
-
-\renewcommand{\cfttabfont}{\sffamily}
-\renewcommand{\cftfigfont}{\sffamily}
 
 \setcounter{secnumdepth}{3}
 

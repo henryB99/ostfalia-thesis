@@ -4,29 +4,28 @@
 \newif\ifdraft
 \drafttrue % Sagt aus, dass dieses Dokument ein Entwurf ist. Somit wird todonotes aktiviert. Zum deaktivieren diese Zeile auskommentieren oder auf \draftfalse setzen.
 
-\input{meta/commands}
-\input{meta/header}
-\input{meta/silbentrennung}
+\input{preamble/commands}
+\input{preamble/header}
+\input{preamble/hypenation}
 
 \begin{document}
 	\listoftodos
-	\input{deckblatt}
+	\input{cover}
 	
 	\tableofcontents
 	\listoffigures
 	\listoftables
 	
-	\input{erklaerung}
+	\input{affirmation}
 	
 	\mainmatter
-	\input{Kapitel/Beispiel/beispiel}
-	\input{Kapitel/Beispiel/beispiel}
+	\input{chapters/chapter1.tex}
 
 	\bibliographystyle{alphadin} 
-	\bibliography{literatur}
+	\bibliography{sources}
 	
 	\clearpage
 	\appendix
 	\pagenumbering{Roman}
-	\input{Kapitel/Beispiel/beispiel}
+%	\input{chapters/chapter1}
 \end{document}
