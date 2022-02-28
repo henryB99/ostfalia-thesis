@@ -1,6 +1,6 @@
-% In diesem Dokument werden die globalen \usepackage{}-Befehle eingefügt.
-% Definition des Seitestils (Ränder, Schriftart, Abstände, usw.)
+% This file should contain all package imports and settings.
 
+% Page style definition (margins, fonts, spacing, etc.)
 \usepackage[top=2.5cm, bottom=2cm, left=3cm, right=2cm]{geometry}
 
 \usepackage[ngerman]{babel}
@@ -17,10 +17,11 @@
 \renewcommand{\cfttabfont}{\sffamily}
 \renewcommand{\cftfigfont}{\sffamily}
 
-\usepackage[bottom]{footmisc} % Display footnotes at the bottom of the page
+% Displays footnotes at the bottom of the page.
+\usepackage[bottom]{footmisc}
 
-\setlength{\parindent}{0em} % Left paragraph indentation
-\setlength{\marginparwidth}{2cm} % Removes a warning thrown by the 'todonotes' package. This is only needed in the draft an can be commented out afterwards.
+% Sets the left paragraph indentation.
+\setlength{\parindent}{0em}
 
 \usepackage{setspace}
 \onehalfspacing
@@ -30,8 +31,10 @@
 
 \usepackage{etoolbox}
 \makeatletter
-\patchcmd{\@makechapterhead}{\vspace*{50\p@}}{}{}{} % Removes space above \chapter head
-\patchcmd{\@makeschapterhead}{\vspace*{50\p@}}{}{}{} % Removes space above \chapter* head
+% Removes space above \chapter head.
+\patchcmd{\@makechapterhead}{\vspace*{50\p@}}{}{}{}
+% Removes space above \chapter* head.
+\patchcmd{\@makeschapterhead}{\vspace*{50\p@}}{}{}{}
 \makeatother
 
 \usepackage{fancyhdr}
@@ -59,8 +62,8 @@
 	\renewcommand{\headrulewidth}{0pt}
 }
 
-
-\usepackage{titlesec} % Im folgenden werden die Schriftarten der Überschriften gesetzt.
+% Sets the header fonts and spacing.
+\usepackage{titlesec}
 \titleformat{\chapter}[display] {\sffamily \huge}{\chaptertitlename\ \thechapter}{-5pt}{\Huge}
 \titlespacing*{\chapter}{0pt}{0pt}{10pt}
 \titleformat{\section}[display] {\sffamily \tiny}{}{0pt}{\LARGE \thesection\ }
@@ -76,10 +79,10 @@
 \usepackage[square, numbers]{natbib}
 
 \usepackage[pdftex, pdfborder={0 0 0}]{hyperref}
-\hypersetup{pdfauthor={\documentauthor},
-	pdftitle={\documenttitle\ - \documentsubtitle},
-	pdfsubject={\documentsubject},
-	pdfkeywords={Betreuer:\ \documenttutor}}
+\hypersetup{pdfauthor={\DocumentAuthor},
+	pdftitle={\DocumentTitle\ - \DocumentSubtitle},
+	pdfsubject={\DocumentSubject},
+	pdfkeywords={Betreuer:\ \DocumentTutor}}
 
 \usepackage{lmodern}
 \usepackage{listings}
@@ -110,9 +113,11 @@
 \renewcommand{\lstlistingname}{Quelltext}
 
 \ifdraft
+	% Shows layout borders.
+	% \usepackage{showframe}
 	\usepackage{todonotes}
+	% Removes a warning thrown by the todonotes package.
+	\setlength{\marginparwidth}{2cm}
 \else
 	\usepackage[disable]{todonotes}
 \fi
-
-%\usepackage{showframe} % Auskommentieren, um die Layoutgrenzen anzuzeigen

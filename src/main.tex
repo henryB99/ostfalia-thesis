@@ -2,14 +2,18 @@
 \usepackage[utf8]{inputenc}
 
 \newif\ifdraft
-\drafttrue % Sagt aus, dass dieses Dokument ein Entwurf ist. Somit wird todonotes aktiviert. Zum deaktivieren diese Zeile auskommentieren oder auf \draftfalse setzen.
+% Marks the project as a draft.
+% Draft mode can be controlled by either setting \drafttrue or \draftfalse or by commenting out the line below.
+\drafttrue
 
-\input{preamble/commands}
+\input{preamble/personal}
 \input{preamble/header}
+\input{preamble/macros}
 \input{preamble/hypenation}
 
 \begin{document}
 	\listoftodos
+
 	\input{cover}
 	
 	\tableofcontents
@@ -27,5 +31,5 @@
 	\clearpage
 	\appendix
 	\pagenumbering{Roman}
-%	\input{chapters/chapter1}
+	\input{appendix}
 \end{document}
