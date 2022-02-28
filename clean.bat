@@ -1,3 +1,4 @@
+rmdir /S build
 del *.aux
 del *.bbl
 del *.blg

@@ -1,0 +1,37 @@
+{
+    "latex-workshop.synctex.afterBuild.enabled": true,
+	"latex-workshop.view.pdf.viewer": "tab",
+	"latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/build",
+	"latex-workshop.latex.recipes": [
+		{
+			"name": "Build Project",
+			"tools": [
+				"build"
+			]
+		},
+		{
+			"name": "Clean Project",
+			"tools": [
+				"clean"
+			]
+		}
+	],
+    "latex-workshop.latex.tools": [
+		{
+			"name": "build",
+			"command": "bash",
+			"args": [
+				"-c",
+				"cd '%WORKSPACE_FOLDER%' && ./build.sh"
+			]
+		},
+		{
+			"name": "clean",
+			"command": "bash",
+			"args": [
+				"-c",
+				"cd '%WORKSPACE_FOLDER%' && ./clean.sh"
+			]
+		}
+	],
+}

@@ -1,3 +1,17 @@
-OUTPUT_DIR=$PWD/dist
-rm -rf $OUTPUT_DIR
-rm -f *.aux *.bbl *.blg *.lof *.log *.lot *.gz *.toc *.run.xml *blx.bib *.pdf *.bcf *.bak *.lol *.out *.tdo
+rm -rf ./build/
+rm -f *.aux
+rm -f *.bbl
+rm -f *.blg
+rm -f *.lof
+rm -f *.log
+rm -f *.lot
+rm -f *.gz
+rm -f *.toc
+rm -f *.run.xml
+rm -f *blx.bib
+rm -f *.pdf
+rm -f *.bcf
+rm -f *.bak
+rm -f *.lol
+rm -f *.out
+rm -f *.tdo
