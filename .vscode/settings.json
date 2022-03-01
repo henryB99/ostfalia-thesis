@@ -4,34 +4,62 @@
 	"latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/build",
 	"latex-workshop.latex.recipes": [
 		{
-			"name": "Build Project",
+			"name": "Build Project (Windows)",
 			"tools": [
-				"build"
+				"windows-build"
 			]
 		},
 		{
-			"name": "Clean Project",
+			"name": "Clean Project (Windows)",
 			"tools": [
-				"clean"
+				"windows-clean"
+			]
+		},
+		{
+			"name": "Build Project (Linux)",
+			"tools": [
+				"linux-build"
+			]
+		},
+		{
+			"name": "Clean Project (Linux)",
+			"tools": [
+				"linux-clean"
 			]
 		}
 	],
     "latex-workshop.latex.tools": [
 		{
-			"name": "build",
+			"name": "windows-build",
+			"command": "../build",
+			"args": [],
+			"env": {}
+		},
+		{
+			"name": "windows-clean",
+			"command": "cmd /c",
+			"args": [
+				"cd %WORKSPACE_FOLDER% && clean"
+			],
+			"env": {}
+		},
+		{
+			"name": "linux-build",
 			"command": "bash",
 			"args": [
 				"-c",
 				"cd '%WORKSPACE_FOLDER%' && ./build.sh"
-			]
+			],
+			"env": {}
 		},
 		{
-			"name": "clean",
+			"name": "linux-clean",
 			"command": "bash",
 			"args": [
 				"-c",
 				"cd '%WORKSPACE_FOLDER%' && ./clean.sh"
-			]
+			],
+			"env": {}
 		}
 	],
 }
